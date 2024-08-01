@@ -12,6 +12,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -48,10 +49,7 @@ public class Users implements UserDetails{
     @UpdateTimestamp
     @Column(name = "MODIFIED_AT")
     private Date userModifiedAt;
-    @Override
-    public Collection<? extends GrantedAuthority> getAuthorities() {
-        return List.of();
-    }
+
     @Override
     public boolean isAccountNonExpired() {
         return UserDetails.super.isAccountNonExpired();
@@ -77,5 +75,9 @@ public class Users implements UserDetails{
     @Override
     public String getUsername() {
         return email;
+    }
+    @Override
+    public Collection<? extends GrantedAuthority> getAuthorities() {
+       return List.of();
     }
 }

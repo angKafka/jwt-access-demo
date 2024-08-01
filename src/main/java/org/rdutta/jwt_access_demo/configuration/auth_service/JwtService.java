@@ -1,8 +1,6 @@
 package org.rdutta.jwt_access_demo.configuration.auth_service;
 
-import java.nio.charset.StandardCharsets;
-import java.security.Key;
-import java.util.Base64;
+
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
