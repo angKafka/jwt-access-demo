@@ -1,0 +1,17 @@
+spring:
+ datasource:
+     url: jdbc:oracle:thin:@localhost:1521:orcl
+     username: rdutta
+     password: Prerna12345
+     driver-class-name: oracle.jdbc.OracleDriver
+ jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.OracleDialect
+    show-sql: 'true'
+    hibernate:
+      ddl-auto: update
+ application:
+   name: jwt-access-demo
+server:
+ port: 8090 
